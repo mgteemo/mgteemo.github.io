@@ -35,7 +35,7 @@
             background: var(--card-bg);
             width: 100%;
             max-width: 420px;
-            padding: 40px 30px;
+            padding: 40px 30px 20px 30px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             text-align: center;
@@ -116,6 +116,28 @@
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(0, 136, 204, 0.4);
         }
+
+        /* Visitor Counter ဒီဇိုင်း (မသိမသာလေး) */
+        .visitor-counter {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            opacity: 0.3; /* မသိမသာဖြစ်စေရန် အလင်းဖျော့ထားသည် */
+            transition: opacity 0.3s ease;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .visitor-counter:hover {
+            opacity: 0.8; /* Mouse တင်ပါက ပိုလင်းလာမည် */
+        }
+
+        .visitor-counter img {
+            height: 16px; /* အရွယ်အစားသေးသေးလေး */
+            filter: grayscale(100%); /* မသိမသာဖြစ်အောင် အဖြူအမည်းပြောင်းထားသည် */
+        }
     </style>
 </head>
 <body>
@@ -138,6 +160,12 @@
         <a href="https://t.me/SpaceXservice_bot" target="_blank" class="btn btn-telegram">
             <i class="fab fa-telegram-plane"></i> Telegram မှ ဆက်သွယ်ရန်
         </a>
+
+        <!-- Visitor Counter -->
+        <div class="visitor-counter">
+            <i class="far fa-eye"></i>
+            <img src="https://profile-counter.glitch.me/spacex-service-contact/count.svg" alt="Visitors Count">
+        </div>
     </div>
 
 </body>
